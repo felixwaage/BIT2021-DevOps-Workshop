@@ -32,7 +32,7 @@ steps:
 
   tmsUpload:
     nodeName: 'PROD'
-    credentialsId: 'group-xx-ctms-servicekey'
+    credentialsId: 'ctms-servicekey-xx'
     customDescription: 'trainer: cTMS upload from pipeline'
   
 ### Stage-specific configuration
