@@ -12,7 +12,7 @@
 
 ### General project setup
 general:
-  gitHttpsCredentialsId: 'trainer-git-access'
+  gitHttpsCredentialsId: 'git-credentials-xx'
   buildTool: 'mta'
   productiveBranch: 'master'
   verbose: true
@@ -29,11 +29,11 @@ steps:
     cloudFoundry:
       org: 'ic-adv-dev-cf'
       space: 'Dev - CI/CD Trainer'
-      credentialsId: 'trainer-cf'
+      credentialsId: 'cf-credentials-xx'
 
   tmsUpload:
     nodeName: 'PROD'
-    credentialsId: 'trainer-ctms-servicekey'
+    credentialsId: 'groupe-xx-ctms-servicekey'
     customDescription: 'trainer: cTMS upload from pipeline'
   
 ### Stage-specific configuration
