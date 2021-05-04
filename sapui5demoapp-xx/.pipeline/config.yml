@@ -13,17 +13,16 @@
 ### General project setup
 general:
   gitHttpsCredentialsId: 'git-credentials-xx'
-  buildTool: 'mta'
-  productiveBranch: 'master'
+  inferBuildTool: true
   verbose: true
 
 ### Step-specific configuration
 steps:
+  mavenExecute:
+    dockerImage: devxci/mbtci:1.0.14
+
   artifactPrepareVersion:
-    versioningType: library
-  
-  artifactSetVersion:
-    commitVersion: false
+    versioningType: cloud_noTag
 
   cloudFoundryDeploy:
     cloudFoundry:
