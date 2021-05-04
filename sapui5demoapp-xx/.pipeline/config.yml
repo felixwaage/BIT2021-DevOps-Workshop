@@ -31,11 +31,6 @@ steps:
       space: 'Dev - CI/CD Trainer'
       credentialsId: 'trainer-cf'
 
-  tmsUpload:
-    nodeName: 'PROD'
-    credentialsId: 'trainer-ctms-servicekey'
-    customDescription: 'trainer: cTMS upload from pipeline'
-  
 ### Stage-specific configuration
 stages:
   'Central Build':
@@ -61,4 +56,3 @@ stages:
 
   'Release':
     cloudFoundryDeploy: true
-    tmsUpload: true
