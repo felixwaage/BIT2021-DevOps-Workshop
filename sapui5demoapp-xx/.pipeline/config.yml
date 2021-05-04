@@ -30,11 +30,28 @@ steps:
       org: 'ic-adv-dev-cf'
       space: 'Dev - CI/CD Trainer'
       credentialsId: 'trainer-cf'
+
+  tmsUpload:
+    nodeName: 'PROD'
+    credentialsId: 'trainer-ctms-servicekey'
+    customDescription: 'trainer: cTMS upload from pipeline'
   
 ### Stage-specific configuration
 stages:
   'Central Build':
     buildExecute : true
+
+  'Additional Unit Tests':
+    npmExecuteScripts:
+       install: true
+       runScripts: 'unit-tests'
+       dockerImage: 'docker pull tbendrath/node-browsers:v11-14-buster'
+
+  'Integration':
+    npmExecuteScripts:
+      install: true
+      runScripts: 'int-tests'
+      dockerImage: 'docker pull tbendrath/node-browsers:v11-14-buster'
 
   'Acceptance':
     cloudFoundryDeploy: false
