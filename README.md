@@ -1,4 +1,4 @@
-# Create a simple SAPUI5 application for Cloud Foundry
+# IC2021: SAPUI5 app on Cloud Foundry + pipeline
 
 ## Setup the SAP Business Application Studio
 
