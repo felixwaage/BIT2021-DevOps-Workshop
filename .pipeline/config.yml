@@ -12,6 +12,7 @@
 
 ### General project setup
 general:
+  productiveBranch: 'chapter5-tms-upload'
   gitHttpsCredentialsId: 'trainer-git-access'
   inferBuildTool: true
   verbose: true
