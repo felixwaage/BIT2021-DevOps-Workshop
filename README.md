@@ -83,6 +83,7 @@
 GitHub-Tools:
 - [Reference repository (initial SAPUI5 app)](https://github.tools.sap/D070317/ic2021-devops-learning-labs/tree/chapter1-basic-sapui5-app)
 - [Request a technical user for GitHub-Tools](https://technical-user-management.github.tools.sap/)
+- [Webhook setup guide](https://github.tools.sap/D070317/ic2021-devops-learning-labs/blob/master/webhook-setup.pdf)
 
 SAP BTP subscriptions:
 - [Business Application Studio](https://ic-adv-dev.eu10cf.applicationstudio.cloud.sap/index.html)
