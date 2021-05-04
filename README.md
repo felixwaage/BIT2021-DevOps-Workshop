@@ -1,58 +1,47 @@
-# Create a simple SAPUI5-App for Deployment on Cloud Foundry
+# Create a simple SAPUI5 application for Cloud Foundry
 
-## Prepare Business Application Studio
-1. Go to SAP Business Technology Platform (InnovatorChallenge-2021) and open your Sub-Account (e.g.: Advanced Track - Dev)
+## Setup the SAP Business Application Studio
 
-    - Global Account: https://cockpit.eu10.hana.ondemand.com/cockpit/#/globalaccount/724f2b9d-5057-43b4-9b47-2b4702833c2e/subaccounts
+1. Go to SAP Business Technology Platform (*InnovatorChallenge-2021*) and open your subaccount (*Advanced Track - Dev*): [subaccounts](https://cockpit.eu10.hana.ondemand.com/cockpit/#/globalaccount/724f2b9d-5057-43b4-9b47-2b4702833c2e/subaccounts)
 
-2. On the left side please select *Instances and Subscriptions* and look for an entry called *SAP Business Application Studio*
+2. In the menu on the left, please select *Instances and Subscriptions* and select the subscription *SAP Business Application Studio*
 
-3. Click on the three blue dots and select Go To Application
+3. Click on the three blue dots and select *Go To Application*
 
-4. After the SAP BAS started you have to create a Dev-Space for SAP Fiori
+4. After the SAP BAS has opened, please create a new Dev-Space for *SAP Fiori*
 
-## Generate an empty SAPUI5-Application
+## Generate an empty SAPUI5 application
 
-1. Click on File - New Project from Template 
+1. Click on *File* -> *New Project from Template*
 
-2. Select SAP Fiori Application --> Start
+2. Select *SAP Fiori Application* -> *Start*
 
-3. In the Dropdown Menu *Application Type* choose *SAPUI5 freestyle* and select SAPUI5 Application --> Next
+3. In the dropdown menu *Application Type*, choose *SAPUI5 freestyle* and select *SAPUI5 Application* and hit *Next*
 
-4. As Data source please press *Connect to an OData Service* since we like to consume data from the Northwind OData-Service. The OData-Service URL should be added below --> Next (https://services.odata.org/V2/Northwind/Northwind.svc/)
+4. As data source, please select *Connect to an OData Service* since we will consume data from the public Northwind OData service. Set the OData service URL (https://services.odata.org/V2/Northwind/Northwind.svc/) in the input field below -> *Next*
 
-5. Don't change the view name and leave it as View1
+5. Do <ins>not</ins> change the view name and leave it as *View1*
 
-6. As Project Attributes please set the following values:
+6. As project attributes, please set the following values:
     - Module Name: sapui5demoapp-xx
     - Application Title: Innovator Challenge 2021 - Demo SAPUI5-App
     - Application Namespace: *leave empty*
-    - Description: Demo Application for Innovator Challenge 2021
+    - Description: Demo application for Innovator Challenge 2021
     - Add deployment configurations: Yes
 
-    Press *Next* to continue
+    Press *Next* to continue.
 
-7. On the next page *Deployment Configuration* select *Cloud Foundry* as target and for the Destionation please choose *backend - https://service.odata.org/*
+7. On the next page *Deployment Configuration*, select *Cloud Foundry* as target. For the destination please choose *backend - https://service.odata.org/*
 
     Press *Finish* to continue.
 
-8. Initialize a git repository with command: `git init`
+## Configure the application router
 
-9. Please open https://github.tools.sap/ and create a new repositry *innovator-challenge-2021-demoapp-xx*
+1. Open the recently created project: *Files* - *Open Workspace* - *projects* - *sapui5demoapp-xx*
 
-10. Now add all changes to the staging area with `git add .` and commit them by `git commit -m "initial commit"`
+2. Open *xs-app.json* (please wait a few minutes until the file is generated)
 
-11. Add your remote repository `git remote add origin https://github.tools.sap/D070317/nnovator-challenge-2021-demoapp-xx.git`
-
-12. Push the changes to your created repository: `git push -u origin master`
-
-## Configure Application Router
-
-1. Open the recently created project: Files - Open Workspace - projects - sapui5demoapp-xx
-
-2. Open xs-app.json (Maybe the file is not available. Please wait a few minutes)
-
-3. Add the following code snippet to the routes in the third place:
+3. Add the following code snippet to the routes in <ins>third</ins> place
 
 ```javascript
     {
@@ -62,9 +51,10 @@
     }
 ```
 
-## Add List to show Products
+## Show the Northwind products in a list
 
-1. Open the following file: webapp/view/View1.view.xml
+1. Open `webapp/view/View1.view.xml`
+
 2. Insert the following code snippet between the content tags
 ```xml
 <List items="{/Products}">
@@ -72,26 +62,38 @@
 </List>
 ```
 
-3. Run the Application using the command: `npm start`
+3. Run the application using the command `npm start`
 
+## Initialize GitHub Tools repository
 
-## Relevant Links
+1. Make sure that you have a terminal window opened on root level of your project
 
-GitHub-Tools (technical user): https://technical-user-management.github.tools.sap/
+2. Initialize a new git repository by executing the command `git init`
 
-BTP-Subscriptions:
-- Business Application Studio: https://ic-adv-dev.eu10cf.applicationstudio.cloud.sap/index.html
-- SAP Cloud Transport Management: https://ic-adv-dev.ts.cfapps.eu10.hana.ondemand.com/main/webapp/index.html
-- Continuous Integration & Delivery: https://ic-adv-dev.cicd.cfapps.eu10.hana.ondemand.com/ui/index.html
+3. Please open [github.tools.sap](https://github.tools.sap/) and create a new repository with the name *sapui5demoapp-xx*
 
-GitHub (initial SAPUI5 App): https://github.tools.sap/D070317/innovator-challenge-2021-demoapp/tree/Chapter-1---Create-a-SAPUI5-App
+4. Now add all code changes to the staging area with `git add .` and commit them by `git commit -m "initial commit"`
 
-Two-Factor: https://accounts.sap.com/ui/protected/profilemanagement
+5. Add your remote repository: `git remote add origin https://github.tools.sap/<SAP_USER>/sapui5demoapp-<TEAM_NUMBER>.git`
 
-Jenkis as a Service: https://ic2021trainers.jaas-gcp.cloud.sap.corp/
+6. Push the changes to your created repository: `git push -u origin master`
 
-### Further Links
+## Relevant links
 
-Pipeline extensibility: https://www.project-piper.io/extensibility/
+GitHub-Tools:
+- [Reference repository (initial SAPUI5 app)](https://github.tools.sap/D070317/ic2021-devops-learning-labs/tree/chapter1-basic-sapui5-app)
+- [Request a technical user for GitHub-Tools](https://technical-user-management.github.tools.sap/)
 
-Initial cTMS Setup: https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/66fd7283c62f48adb23c56fb48c84a60.html
+SAP BTP subscriptions:
+- [Business Application Studio](https://ic-adv-dev.eu10cf.applicationstudio.cloud.sap/index.html)
+- [SAP Cloud Transport Management](https://ic-adv-dev.ts.cfapps.eu10.hana.ondemand.com/main/webapp/index.html)
+- [SAP Continuous Integration & Delivery](https://ic-adv-dev.cicd.cfapps.eu10.hana.ondemand.com/ui/index.html)
+
+Jenkins-as-a-Service:
+- [Two-Factor Authentication for JaaS](https://accounts.sap.com/ui/protected/profilemanagement)
+- Team-xx JaaS: https://icteamXXXX.jaas-gcp.cloud.sap.corp/
+
+### Further links
+
+- [Pipeline extensibility](https://www.project-piper.io/extensibility/)
+- [Initial cTMS setup](https://help.sap.com/viewer/7f7160ec0d8546c6b3eab72fb5ad6fd8/Cloud/en-US/66fd7283c62f48adb23c56fb48c84a60.html)
