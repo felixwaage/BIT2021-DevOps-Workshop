@@ -35,18 +35,6 @@ stages:
   'Central Build':
     buildExecute : true
 
-  'Additional Unit Tests':
-    npmExecuteScripts:
-       install: true
-       runScripts: 'unit-tests'
-       dockerImage: 'docker pull tbendrath/node-browsers:v11-14-buster'
-
-  'Integration':
-    npmExecuteScripts:
-      install: true
-      runScripts: 'int-tests'
-      dockerImage: 'docker pull tbendrath/node-browsers:v11-14-buster'
-
   'Acceptance':
     cloudFoundryDeploy: false
 

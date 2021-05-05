@@ -9,7 +9,14 @@ sap.ui.define([
 
 		return Controller.extend("sapui5demoapptrainer.controller.View1", {
 			onInit: function () {
+			},
 
+			UnitTestExampleCorrect: function(a,b) {
+				return a + b;
+			},
+		  
+			UnitTestExampleFailure: function(a,b) {
+				return a + b - 1;
 			}
 		});
 	});
