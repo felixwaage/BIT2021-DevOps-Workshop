@@ -31,17 +31,13 @@
         "@sap/ui5-builder-webide-extension": "1.0.x",
         "ui5-task-zipper": "^0.3.1",
         "mbt": "^1.0.15",
-        "karma-coverage-istanbul-reporter": "^2.1.1",
         "eslint": "^7.21.0",
         "karma": "^6.1.1",
         "karma-chrome-launcher": "^3.1.0",
-        "karma-coverage": "^2.0.3",
-        "karma-openui5": "^0.2.3",
         "karma-qunit": "^4.1.2",
         "karma-ui5": "^2.3.3",
         "karma-webdriver-launcher": "^1.0.8",
-        "qunit": "^2.14.0",
-        "puppeteer": "^9.1.1"
+        "qunit": "^2.14.0"
     },
     "ui5": {
         "dependencies": [

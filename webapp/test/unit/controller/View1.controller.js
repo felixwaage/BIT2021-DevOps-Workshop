@@ -24,6 +24,6 @@ sap.ui.define([
         var oAppController = new Controller();
         var compareValue = oAppController.UnitTestExampleFailure(3,3);
         assert.strictEqual(compareValue,6,"3 + 3 should give 6 and gives: "+compareValue);
-    })
+    });
 
 });
