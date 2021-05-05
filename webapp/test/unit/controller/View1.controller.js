@@ -1,7 +1,7 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"sapui5demoapp-trainer/controller/View1.controller"
+	"sapui5demoapptrainer/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 
