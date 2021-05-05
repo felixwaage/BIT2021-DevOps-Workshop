@@ -13,7 +13,7 @@
 ### General project setup
 general:
   productiveBranch: 'chapter3-unit-integration-tests'
-  gitHttpsCredentialsId: 'git-credentials-xx'
+  gitHttpsCredentialsId: 'trainer-git-access'
   inferBuildTool: true
   verbose: true
 
@@ -29,7 +29,7 @@ steps:
     cloudFoundry:
       org: 'ic-adv-dev-cf'
       space: 'Dev - CI/CD Trainer'
-      credentialsId: 'cf-credentials-xx'
+      credentialsId: 'trainer-cf'
 
 ### Stage-specific configuration
 stages:
