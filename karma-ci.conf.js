@@ -21,10 +21,10 @@ module.exports = function(config) {
 			],
 			check: {
 				each: {
-					statements: 100,
-					branches: 100,
-					functions: 100,
-					lines: 100
+					statements: 0,
+					branches: 0,
+					functions: 0,
+					lines: 0
 				}
 			}
 		},
@@ -48,7 +48,7 @@ module.exports = function(config) {
 			}
 		},
 
-		reporters: ["progress"], //, "coverage", "junit"],
+		reporters: ["progress"], 
 
 		browsers: ["ChromeRemote"],
 
