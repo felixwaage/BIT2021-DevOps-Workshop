@@ -37,19 +37,6 @@ stages:
   'Central Build':
     buildExecute : true
 
-  'Additional Unit Tests':
-    karmaExecuteTests:
-      dockerName: 'karma'
-      sidecarImage: 'selenium/standalone-chrome'
-      sidecarName: 'selenium'
-      runCommand: 'npm run karma-ci'
-
-  'Integration':
-    npmExecuteScripts:
-      install: true
-      runScripts: 'int-tests'
-      dockerImage: 'docker pull tbendrath/node-browsers:v11-14-buster'
-
   'Acceptance':
     cloudFoundryDeploy: false
 

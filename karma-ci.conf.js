@@ -36,21 +36,7 @@ module.exports = function(config) {
 
 		browserNoActivityTimeout: 30000,
 
-		browsers: ['RemoteChrome'],
-
-		hostname: "karma",
-		customLaunchers: {
-			"RemoteChrome": {
-				base: "WebDriver",
-				config: {
-					hostname: "selenium",
-					port: 4444
-				},
-				browserName: "chrome",
-				name: "Karma",
-				pseudoActivityInterval: 30000
-			}
-		},
+		browsers: ['ChromeHeadless'],
 
 		singleRun: true
 	});
