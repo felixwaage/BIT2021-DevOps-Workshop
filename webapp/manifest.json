@@ -1,7 +1,7 @@
 {
     "_version": "1.32.0",
     "sap.app": {
-        "id": "sapui5demoappxx",
+        "id": "sapui5demoapptrainer",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -41,7 +41,7 @@
     "sap.ui5": {
         "flexEnabled": false,
         "rootView": {
-            "viewName": "sapui5demoappxx.view.View1",
+            "viewName": "sapui5demoapptrainer.view.View1",
             "type": "XML",
             "async": true,
             "id": "View1"
@@ -62,7 +62,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "sapui5demoappxx.i18n.i18n"
+                    "bundleName": "sapui5demoapptrainer.i18n.i18n"
                 }
             },
             "": {
@@ -82,7 +82,7 @@
                 "routerClass": "sap.m.routing.Router",
                 "viewType": "XML",
                 "async": true,
-                "viewPath": "sapui5demoappxx.view",
+                "viewPath": "sapui5demoapptrainer.view",
                 "controlAggregation": "pages",
                 "controlId": "app",
                 "clearControlAggregation": false
@@ -109,6 +109,6 @@
     },
     "sap.cloud": {
         "public": true,
-        "service": "sapui5demoappxx"
+        "service": "sapui5demoapptrainer"
     }
 }

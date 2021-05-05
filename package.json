@@ -1,5 +1,5 @@
 {
-    "name": "sapui5demoapp-xx",
+    "name": "sapui5demoapp-trainer",
     "version": "0.0.1",
     "private": true,
     "description": "Demo Application for Innovator Challenge 2021",
@@ -19,7 +19,7 @@
         "int-tests": "fiori run --open test/integration/opaTests.qunit.html",
         "build:cf": "ui5 build preload --clean-dest --config ui5-deploy.yaml --include-task=generateManifestBundle generateCachebusterInfo",
         "build:mta": "rimraf resources mta_archives && mbt build --mtar archive",
-        "undeploy": "cf undeploy sapui5demoappxx --delete-services --delete-service-keys"
+        "undeploy": "cf undeploy sapui5demoapptrainer --delete-services --delete-service-keys"
     },
     "devDependencies": {
         "@ui5/cli": "^2.10.1",
