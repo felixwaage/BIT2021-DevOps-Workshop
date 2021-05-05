@@ -1,6 +1,6 @@
 specVersion: '2.0'
 metadata:
-  name: 'sapui5demoapp-xx'
+  name: 'sapui5demoapp-trainer'
 type: application
 framework:
   name: SAPUI5

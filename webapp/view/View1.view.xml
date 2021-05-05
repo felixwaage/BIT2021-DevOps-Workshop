@@ -1,5 +1,5 @@
 <mvc:View xmlns:microchart="sap.suite.ui.microchart"
-    controllerName="sapui5demoappxx.controller.View1"
+    controllerName="sapui5demoapptrainer.controller.View1"
     xmlns:mvc="sap.ui.core.mvc"
     displayBlock="true"
     xmlns="sap.m"

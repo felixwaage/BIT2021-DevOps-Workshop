@@ -13,7 +13,7 @@
 ### General project setup
 general:
   productiveBranch: 'chapter2-general-purpose-pipeline'
-  gitHttpsCredentialsId: 'git-credentials-xx'
+  gitHttpsCredentialsId: 'git-credentials-trainer'
   inferBuildTool: true
   verbose: true
 
@@ -29,7 +29,7 @@ steps:
     cloudFoundry:
       org: 'ic-adv-dev-cf'
       space: 'Dev - CI/CD Trainer'
-      credentialsId: 'cf-credentials-xx'
+      credentialsId: 'cf-credentials-trainer'
   
 ### Stage-specific configuration
 stages:
