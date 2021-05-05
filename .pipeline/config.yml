@@ -13,7 +13,6 @@
 ### General project setup
 general:
   productiveBranch: 'chapter3-unit-integration-tests'
-  gitHttpsCredentialsId: 'trainer-git-access'
   inferBuildTool: true
   verbose: true
 
