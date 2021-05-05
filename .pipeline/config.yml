@@ -26,7 +26,8 @@ steps:
 
   npmExecuteScripts:
     install: true
-    runScripts: 'unit-tests'
+    runScripts: 
+      - unit-tests
     dockerImage: 'tbendrath/node-browsers:v11-14-buster'
 
   cloudFoundryDeploy:
