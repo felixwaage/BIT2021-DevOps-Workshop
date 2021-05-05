@@ -24,12 +24,6 @@ steps:
   artifactPrepareVersion:
     versioningType: cloud_noTag
 
-  npmExecuteScripts:
-    install: true
-    runScripts: 
-      - unit-tests
-    dockerImage: 'ppiper/node-browsers:v11-14-buster'
-
   cloudFoundryDeploy:
     cloudFoundry:
       org: 'ic-adv-dev-cf'
@@ -47,10 +41,12 @@ stages:
     buildExecute : true
 
   'Additional Unit Tests':
-    npmExecuteScripts: true
-      #  install: true
-      #  runScripts: 'unit-tests'
-      #  dockerImage: 'tbendrath/node-browsers:v11-14-buster'
+    npmExecuteScripts:
+      install: true
+      runScripts: 
+        - unit-tests
+      dockerImage: 'ppiper/node-browsers:v11-14-buster'
+    # npmExecuteScripts: true
 
   # 'Integration':
   #   npmExecuteScripts:
