@@ -13,6 +13,7 @@ sap.ui.define([
 		assert.ok(oAppController);
 	});
 
+
 	QUnit.test("Test UnitTestExampleCorrect Function", function(assert) {
         var oAppController = new Controller();
         var compareValue = oAppController.UnitTestExampleCorrect(3,3);
@@ -25,5 +26,4 @@ sap.ui.define([
         var compareValue = oAppController.UnitTestExampleFailure(3,3);
         assert.strictEqual(compareValue,6,"3 + 3 should give 6 and gives: "+compareValue);
     });
-
 });
