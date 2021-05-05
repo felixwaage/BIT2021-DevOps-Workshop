@@ -4,10 +4,6 @@ module.exports = function(config) {
 	require("./karma.conf")(config);
 	config.set({
 
-		preprocessors: {
-			"{webapp,webapp/!(test)}/*.js": ["coverage"]
-		},
-
 		coverageReporter: {
 			includeAllSources: true,
 			reporters: [
@@ -48,7 +44,7 @@ module.exports = function(config) {
 			}
 		},
 
-		reporters: ["progress"], //, "coverage", "junit"],
+		reporters: ["progress"],
 
 		browsers: ["ChromeRemote"],
 
