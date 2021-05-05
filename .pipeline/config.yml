@@ -28,7 +28,7 @@ steps:
     install: true
     runScripts: 
       - unit-tests
-    dockerImage: 'tbendrath/node-browsers:v11-14-buster'
+    dockerImage: 'ppiper/node-browsers:v11-14-buster'
 
   cloudFoundryDeploy:
     cloudFoundry:
