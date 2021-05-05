@@ -13,7 +13,6 @@
 ### General project setup
 general:
   productiveBranch: 'chapter4-init-stage-extension'
-  gitHttpsCredentialsId: 'trainer-git-access'
   inferBuildTool: true
   verbose: true
 
