@@ -1,6 +1,6 @@
 _schema-version: "3.2"
 ID: sapui5demoappxx
-description: Demo Application for Innovator Challenge 2021
+description: Demo Application for BIT 2021
 version: 0.0.1
 modules:
 - name: sapui5demoappxx-dest-content
