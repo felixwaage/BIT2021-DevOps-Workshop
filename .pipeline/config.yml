@@ -47,7 +47,7 @@ stages:
     buildExecute : true
 
   'Additional Unit Tests':
-    npmExecuteScripts: true
+    npmExecuteScripts: false
 
   # 'Integration':
   #   npmExecuteScripts:
