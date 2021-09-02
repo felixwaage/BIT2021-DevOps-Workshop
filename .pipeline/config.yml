@@ -32,12 +32,12 @@ steps:
 
   cloudFoundryDeploy:
     cloudFoundry:
-      org: 'ic-adv-dev-cf'
-      space: 'Dev - CI/CD Trainer'
+      org: 'cf-dts-inner-source'
+      space: 'dev'
       credentialsId: 'trainer-cf'
 
   tmsUpload:
-    nodeName: 'PROD'
+    nodeName: 'DEV'
     credentialsId: 'trainer-ctms-servicekey'
     customDescription: 'trainer: cTMS upload from pipeline'
   
