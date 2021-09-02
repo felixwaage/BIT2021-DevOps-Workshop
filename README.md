@@ -9,7 +9,7 @@
 |**Service Type**<br>OData Url|
 |**Service URL**<br>https://services.odata.org/V2/Northwind/Northwind.svc/
 |**Module Name**<br>sapui5demoapp-trainer|
-|**Application Title**<br>Innovator Challenge 2021 - Demo SAPUI5-App|
+|**Application Title**<br>BIT 2021 - Demo SAPUI5-App|
 |**Namespace**<br>|
 |**UI5 Theme**<br>sap_fiori_3|
 |**UI5 Version**<br>Latest|
@@ -17,7 +17,7 @@
 
 ## sapui5demoapp-trainer
 
-Demo Application for Innovator Challenge 2021
+Demo Application for BIT 2021
 
 ### Starting the generated app
 
